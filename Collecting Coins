@@ -1,0 +1,9 @@
+t = int(input())
+for _ in range(t):
+    a, b, c, n = map(int, input().split())
+    max_coin = max(a, b, c)
+    need = (max_coin - a) + (max_coin - b) + (max_coin - c)
+    if n >= need and (n - need) % 3 == 0:
+        print("YES")
+    else:
+        print("NO")
